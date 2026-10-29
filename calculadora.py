@@ -13,6 +13,7 @@ def dividir(a, b):
         raise valueError("No se puede dividir entre cero")
     return a / b
 
+
 def seno(angulo):                # Recibe un ángulo en grados.
     return math.sin(math.radians(angulo))  # Calcula el seno.
 
@@ -22,5 +23,11 @@ def coseno(angulo):              # Recibe un ángulo en grados.
 def tangente(angulo):            # Recibe un ángulo en grados.
     return math.tan(math.radians(angulo))  # Calcula la tangente.
 
+
 def exponencial(x):                # Calcula la función exponencial.
     return math.exp(x)             # Devuelve e elevado a x.
+
+def logaritmo(x):                  # Calcula el logaritmo natural.
+    if x <= 0:                    # Comprueba que x sea positivo.
+        raise ValueError("x debe ser positivo")
+    return math.log(x)            # Devuelve ln(x).
